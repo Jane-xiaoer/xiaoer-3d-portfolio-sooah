@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小耳 Jane · 3D 作品集 · v2 甜室版</title>
+    <link rel="stylesheet" href="./src/style.scss" />
+    <link rel="icon" type="image/png" href="media/dark-favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/media/dark-faviconfavicon.svg" />
+    <link rel="shortcut icon" href="media/dark-favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="media/dark-favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="media/dark-favicon/site.webmanifest" />
+
+    <meta name="language" content="Chinese" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/media/og-image.webp" />
+
+    <meta
+      property="og:description"
+      content="嗨，我是李娟，朋友们叫我小耳。AI 艺术家 / AI Vibe Coder / 艺术总监。这是我的 3D 作品集 v2 甜室版——基于 Andrew Woan 的 Sooah's Room Folio 中文化定制。点击房间里的木牌探索我的作品 ✨"
+    />
+
+  </head>
+  <body class="light-theme">
+
+    <div class="loading-screen">
+      <button class="loading-screen-button">
+        加载中...
+      </button>
+
+       <button class="no-sound-button">
+
+      </button>
+
+      <p class="desktop-instructions instructions">用鼠标左右键拖动 + 滚轮缩放，点击房间里的木牌探索 ✨</p>
+      <p class="mobile-instructions instructions">用一根或两根手指滑动来探索 ✨</p>
+    </div>
+    
+    <div class="overlay"></div>
+
+    <button class="mute-toggle-button toggle-buttons">
+      <svg
+        width="800"
+        height="800"
+        viewBox="0 0 800 800"
+        fill="none"
+        class="sound-svg sound-off-svg"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M366.064 567.04C430.064 624 508.464 663.04 545.584 650.56C612.784 625.6 623.984 490.557 623.984 397.117C623.984 371.197 623.984 341.76 620.464 312.641"
+          stroke-width="85"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M596.134 200.963C592.038 188.521 585.44 177.047 576.746 167.252C568.051 157.456 557.443 149.545 545.578 144.002C506.218 129.282 422.698 175.999 353.578 237.119H302.375C268.427 237.119 235.87 250.606 211.865 274.611C187.86 298.616 174.375 331.171 174.375 365.12V429.12C174.365 453.795 181.488 477.952 194.887 498.672C208.285 519.395 227.387 535.802 249.894 545.92"
+          stroke-width="85"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M720 77.4414L80 717.44"
+          stroke-width="85"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <svg
+        width="800"
+        height="800"
+        viewBox="0 0 800 800"
+        fill="none"
+        class="sound-svg sound-on-svg"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M417.578 144.002C378.218 129.282 294.696 175.999 225.576 237.119H174.375C140.427 237.119 107.87 250.606 83.8653 274.611C59.8605 298.616 46.375 331.171 46.375 365.12V429.12C46.375 463.066 59.8605 495.626 83.8653 519.632C107.87 543.635 140.427 557.12 174.375 557.12H225.576C293.096 619.2 376.618 664.96 417.578 650.56C484.778 625.6 495.974 490.56 495.974 397.12C495.974 303.679 484.778 168.962 417.578 144.002Z"
+          stroke-width="85"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M677.127 215.039C725.098 263.044 752.049 328.134 752.049 396C752.049 463.866 725.098 528.957 677.127 576.96"
+          stroke-width="85"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M609.252 510.4C639.246 480.394 656.097 439.703 656.097 397.277C656.097 354.851 639.246 314.165 609.252 284.16"
+          stroke-width="85"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <button class="theme-toggle-button toggle-buttons">
+      <svg class="sun-svg" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M733.333 550H66.666M666.666 666.667H133.333M399.999 100V166.667M133.333 433.333H66.666M210.47 243.804L163.329 196.663M589.516 243.804L636.659 196.663M733.333 433.333H666.666M233.333 433.333C233.333 341.287 307.952 266.667 399.999 266.667C492.046 266.667 566.666 341.287 566.666 433.333"  stroke-width="85" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="moon-svg" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M446.619 254.869C449.832 245.908 462.666 245.908 465.879 254.869L474.669 279.371C475.699 282.239 477.983 284.495 480.886 285.511L505.696 294.193C514.766 297.368 514.766 310.04 505.696 313.215L480.886 321.897C477.983 322.913 475.699 325.169 474.669 328.038L465.879 352.54C462.666 361.5 449.832 361.5 446.619 352.54L437.829 328.038C436.799 325.169 434.516 322.913 431.612 321.897L406.803 313.215C397.733 310.04 397.733 297.368 406.803 294.193L431.612 285.511C434.516 284.495 436.799 282.239 437.829 279.371L446.619 254.869Z" fill="currentColor"/>
+        <path d="M543.581 363.74C545.724 357.766 554.278 357.766 556.421 363.74L562.281 380.073C562.968 381.986 564.491 383.49 566.427 384.166L582.964 389.956C589.014 392.073 589.014 400.52 582.964 402.636L566.427 408.423C564.491 409.103 562.968 410.606 562.281 412.52L556.421 428.853C554.278 434.826 545.724 434.826 543.581 428.853L537.721 412.52C537.034 410.606 535.511 409.103 533.574 408.423L517.037 402.636C510.987 400.52 510.987 392.073 517.037 389.956L533.574 384.166C535.511 383.49 537.034 381.986 537.721 380.073L543.581 363.74Z" fill="currentColor"/>
+        <path d="M592.31 109.728C596.963 96.7573 615.537 96.7573 620.19 109.728L636.14 154.184C637.627 158.335 640.937 161.602 645.14 163.073L690.15 178.825C703.283 183.421 703.283 201.764 690.15 206.36L645.14 222.112C640.937 223.583 637.627 226.85 636.14 231.002L620.19 275.457C615.537 288.428 596.963 288.428 592.31 275.457L576.36 231.002C574.873 226.85 571.563 223.583 567.36 222.112L522.35 206.36C509.217 201.764 509.217 183.421 522.35 178.825L567.36 163.073C571.563 161.602 574.873 158.335 576.36 154.184L592.31 109.728Z" fill="currentColor"/>
+        <path d="M100 448.657C100 587.47 215.807 700 358.66 700C468.637 700 562.58 633.31 600 539.277C570.363 552.803 537.27 560.363 502.363 560.363C375.38 560.363 272.441 460.337 272.441 336.947C272.441 285.342 290.446 237.824 320.685 200C195.834 217.85 100 322.377 100 448.657Z"  stroke-width="85" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="work modal">
+      <div class="modal-wrapper">
+        <h1 class="modal-title">~ 我的作品 ~</h1>
+
+        <div class="modal-content">
+          <div class="modal-content-wrapper">
+            <div class="work-project">
+              <div class="work-project-wrapper">
+                <div class="work-image-wrapper">
+                  <img
+                    class="work-base-image"
+                    src="/images/community.webp"
+                    alt="《方程之舞》"
+                    srcset=""
+                  />
+                </div>
+                <div class="paragraph-section">
+                  <h2 class="modal-paragraph-header">《方程之舞》</h2>
+                  <p class="modal-paragraph-text">
+                    AI 创作的视觉艺术作品。把数学方程跳成一支舞——用生成式 AI 把抽象方程的视觉语言转化为充满诗意的动态画面。入选 2025 今日未来馆 AI 艺术特展、第六届国际学生媒体艺术节、荣宝斋深圳拍卖、重庆国际光影节，作品被红树林 AI 艺术万人展收录。
+                  </p>
+                  <p class="modal-paragraph-text sm-margin-top sm-font">
+                    关键词：生成式 AI、视觉艺术、数学之美、动态影像、AI 艺术家
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="work-project">
+              <div class="work-project-wrapper">
+                <div class="work-image-wrapper">
+                  <img
+                    class="work-base-image"
+                    src="/images/computer.webp"
+                    alt="武隆懒坝国际大地艺术节"
+                    srcset=""
+                  />
+                </div>
+                <div class="paragraph-section">
+                  <h2 class="modal-paragraph-header">武隆懒坝国际大地艺术节</h2>
+                  <p class="modal-paragraph-text">
+                    在重庆武隆山顶建一座美术馆，做一场 39 组艺术家、230 名志愿者的国际艺术节。担任艺术总监 3 年（2018-2021），与世界各地艺术家驻地创作，与当地人、志愿者一起完成老百姓看得懂、大众喜爱的作品。带回日本 TDC、美国 IES、英国 LDA、年度公共艺术节、谷德全球 20 佳文化建筑——共 5 项国际大奖。
+                  </p>
+                  <p class="modal-paragraph-text sm-margin-top sm-font">
+                    关键词：艺术总监、大地艺术、公共艺术、国际艺术节、品牌运营、文旅融合
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="work-project">
+              <div class="work-project-wrapper">
+                <div class="work-image-wrapper">
+                  <img
+                    class="work-base-image"
+                    src="/images/piano.webp"
+                    alt="AI Vibe Coding 工具集"
+                    srcset=""
+                  />
+                </div>
+                <div class="paragraph-section">
+                  <h2 class="modal-paragraph-header">
+                    AI Vibe Coding 工具集
+                  </h2>
+                  <p class="modal-paragraph-text">
+                    为企业和个人定制 AI 工具。用代码 + AI 把日常的痛点变成可用产品——代表作《大牌肖像馆》《相机博物馆》《分镜生成器》《3D 城市》《关于我的故事》视频工作流。从设计美感到底层逻辑，每一个工具都是一件作品。也是这个 3D 作品集本身的实现方式 ✨
+                  </p>
+                  <p class="modal-paragraph-text sm-margin-top sm-font">
+                    关键词：AI 工具开发、Claude Code、Vibe Coding、产品设计、用户体验、生成式 AI
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="modal-exit-button">
+        <svg
+          width="98"
+          height="96"
+          viewBox="0 0 98 96"
+          class="exit-button-svg"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="115.92"
+            height="17.889"
+            rx="8.94448"
+            transform="matrix(-0.696845 0.717222 0.717222 0.696845 83.1709 0)"
+            fill="currentColor"
+          />
+          <rect
+            width="115.92"
+            height="17.889"
+            rx="8.94448"
+            transform="matrix(0.73406 0.679084 0.679084 -0.73406 0 13.1318)"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="about modal">
+      <div class="modal-wrapper">
+        <h1 class="modal-title">~ 关于我 ~</h1>
+
+        <div class="modal-content">
+          <div class="modal-content-wrapper">
+            <div class="paragraph-section">
+              <div class="image-wrapper">
+                <img
+                  class="base-image"
+                  src="/images/profile_pic.webp"
+                  alt="小耳 Jane"
+                  srcset=""
+                />
+              </div>
+              <h2 class="modal-paragraph-header">
+                AI 艺术家 · AI Vibe Coder · 艺术总监 💜
+              </h2>
+              <p class="modal-paragraph-text">
+                嗨 👋 我是李娟，朋友们叫我小耳。25 年职业横跨媒体、商业地产、艺术、AI——做过电视台编导、地产运营总监，也做过武隆国际大地艺术节的艺术总监，带回 5 项国际大奖。
+              </p>
+              <p class="modal-paragraph-text sm-margin-top">
+                现在做最让我兴奋的事——AI 艺术家 + AI Vibe Coder。用 AI 创作艺术（《方程之舞》《初始方程》入选今日未来馆、荣宝斋拍卖），也用 AI 为企业和个人定制工具。从底层重新构建商业与艺术的关系 ✨
+              </p>
+              <h2 class="modal-paragraph-header">现在在做什么:</h2>
+              <ul>
+                <li class="list-text">
+                  AI 艺术作品系列《方程之舞》《初始方程》——把数学与生命用视觉表达，2025 已入选今日未来馆 AI 艺术特展、荣宝斋深圳拍卖、第六届国际学生媒体艺术节等多个国际展。
+                </li>
+                <li class="list-text">
+                  AI Vibe Coding 工具集——为企业和个人定制 AI 工具，把日常痛点变成可用产品。这个 3D 作品集本身就是一件 Vibe Coding 作品。
+                </li>
+                <li class="list-text">
+                  跟随台湾中山大学骆明凌教授深度学习 LLM，是字节跳动飞书多维表格内测开发者。每天在打通商业与艺术设计的底层逻辑。
+                </li>
+              </ul>
+              <h2 class="modal-paragraph-header-2">作品集致谢与灵感:</h2>
+              <ul>
+                <li class="list-text-2">
+                  3D 滚动作品集的开山之作来自日本设计师 <a href="https://bokoko33.me/" target="_blank" rel="noopener">bokoko33</a>，向他致敬 ✨
+                </li>
+                <li class="list-text-2">
+                  本站基于 <a href="https://github.com/andrewwoan/sooahs-room-folio" target="_blank" rel="noopener">Andrew Woan 的 Sooah's Room Folio</a>（MIT 开源）做中文化定制，3D 房间是 Andrew Woan 与 Soo-ah Kim 共同创作。
+                </li>
+                <li class="list-text-2">
+                  房间里的木牌保留了原作签名（My Work / About / Contact）作为致敬——所有内容已替换为我的作品与故事。
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="modal-exit-button">
+        <svg
+          width="98"
+          height="96"
+          viewBox="0 0 98 96"
+          class="exit-button-svg"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="115.92"
+            height="17.889"
+            rx="8.94448"
+            transform="matrix(-0.696845 0.717222 0.717222 0.696845 83.1709 0)"
+            fill="currentColor"
+          />
+          <rect
+            width="115.92"
+            height="17.889"
+            rx="8.94448"
+            transform="matrix(0.73406 0.679084 0.679084 -0.73406 0 13.1318)"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="contact modal">
+      <div class="modal-wrapper">
+        <h1 class="modal-title">~ 联系我 ~</h1>
+
+        <div class="modal-content">
+          <div class="modal-content-wrapper">
+            <div class="paragraph-section">
+              <h2 class="modal-paragraph-header xsm-margin-top">
+                喜欢 AI 艺术、商业 × 创意、想约稿合作 → 来找我！
+              </h2>
+              <div class="contact-button-wrapper">
+                <a
+                  class="contact-link"
+                  href="https://x.com/xiaoezhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (Twitter)"
+                >
+                  <svg class="contact-svg x-twitter" width="800" height="800" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a
+                  class="contact-link"
+                  href="https://mp.weixin.qq.com/s/q4DwpS43VaOhPP7jyFC8dw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ears 公众号"
+                >
+                  <svg class="contact-svg wechat" width="800" height="800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8.5C3 5.5 5.5 4 8.5 4h7C18.5 4 21 5.5 21 8.5v5C21 16.5 18.5 18 15.5 18H10l-4 3 .5-3H8.5C5.5 18 3 16.5 3 13.5z"/>
+                    <circle cx="9" cy="11" r="0.8" fill="currentColor" stroke="none"/>
+                    <circle cx="15" cy="11" r="0.8" fill="currentColor" stroke="none"/>
+                  </svg>
+                </a>
+                <a
+                  class="contact-link"
+                  href="https://xiaoer-art.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="个人艺术网站 xiaoer-art.com"
+                >
+                  <svg class="contact-svg website" width="800" height="800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2 a 15 15 0 0 1 0 20 a 15 15 0 0 1 0 -20"/>
+                  </svg>
+                </a>
+                <a
+                  class="contact-link"
+                  href="https://www.xiaohongshu.com/search_result?keyword=621994108"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="小红书 621994108"
+                >
+                  <svg class="contact-svg xhs" width="800" height="800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="3" width="16" height="18" rx="2"/>
+                    <line x1="8" y1="8" x2="16" y2="8"/>
+                    <line x1="8" y1="12" x2="16" y2="12"/>
+                    <line x1="8" y1="16" x2="13" y2="16"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="modal-exit-button">
+        <svg
+          width="98"
+          height="96"
+          viewBox="0 0 98 96"
+          class="exit-button-svg"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="115.92"
+            height="17.889"
+            rx="8.94448"
+            transform="matrix(-0.696845 0.717222 0.717222 0.696845 83.1709 0)"
+            fill="currentColor"
+          />
+          <rect
+            width="115.92"
+            height="17.889"
+            rx="8.94448"
+            transform="matrix(0.73406 0.679084 0.679084 -0.73406 0 13.1318)"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div id="experience">
+      <canvas id="experience-canvas" class="experience-canvas"></canvas>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
