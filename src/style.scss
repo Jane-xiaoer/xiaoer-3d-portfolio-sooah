@@ -59,7 +59,8 @@ $themes: (
 
 body {
   overflow: hidden;
-  font-family: "Shifty Notes", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  // Shifty Notes 试用版数字会显示 DEMO 水印,改用系统中文字体
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
 }
 
 :root {
@@ -88,13 +89,13 @@ body {
 // Text styles
 h1,
 h2 {
-  font-family: "Motley Forces", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
 }
 
 p,
 ul,
 li {
-  font-family: "Shifty Notes", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
 }
 
 ul {
@@ -700,7 +701,7 @@ ul {
 }
 
 .loading-screen-button {
-  font-family: "Motley Forces", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
   @include vars.centered;
   background-color: transparent;
   padding: 10px 40px;
@@ -716,7 +717,7 @@ ul {
 }
 
 .no-sound-button {
-  font-family: "Motley Forces", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
   @include vars.centered;
   background-color: transparent;
   border: none;
@@ -743,7 +744,7 @@ ul {
   width: 90%;
   font-size: 28px;
   transform: translate(-50%, -50%);
-  font-family: "Shifty Notes", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
   color: #e6dede;
 }
 
